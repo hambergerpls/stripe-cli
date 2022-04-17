@@ -27,7 +27,9 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name : Build stripe
-        run: make build
+        run: |
+          make
+          make build
       -
         name: Build and push
         uses: docker/build-push-action@v2
