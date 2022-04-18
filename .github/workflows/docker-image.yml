@@ -37,6 +37,7 @@ jobs:
         run: |
           make setup
           make build
+          ls
       -
         name: Build and push
         uses: docker/build-push-action@v2
